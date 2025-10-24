@@ -7,7 +7,7 @@ header {
     grid-area: header;
     font-size: 20px;
     height: 500px;
-    background-image: url('../imgs/frikimania.jpg');
+    background-image: url('../imgs/frikimania.png');
     background-size: cover;
     background-position: center;
 }
@@ -18,15 +18,27 @@ body {
     height: 500px;
     display: grid;
     grid-template-areas:
+    
     "header     header"
     "section    aside"
-    "section    aside"
+    "news       aside"
+    "news       aside"
     "footer     footer";
 }
 footer {
     grid-area: footer;
-    background-color: blueviolet;
+    bbackground: #3F5EFB;
+    background: radial-gradient(circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(87, 180, 206, 1) 31%,
+    rgba(100, 79, 184, 1) 64%,
+    rgba(252, 70, 107, 1) 100%);
 }
+#main, #list, #questionary {
+    border: 2px solid aliceblue;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+
 h1, h2 {
     background-color: rgba(0, 0, 0, 0.644);
     text-align: center;
@@ -35,9 +47,17 @@ h1, h2 {
     color: rgb(255, 255, 255);
     align-items: center;
 }
-section {
+#news {
+    color: aliceblue;
+    height: 450px;
+    border-radius: 5%;
+    background-image: url('../imgs/your-name.jpg');
+}
+#news > p {
+    color: black;
+}
+#lema {
     grid-area: section;
-    background-color: #00ffff69;
     grid-area: section;
     text-align: center;
     color: black;
@@ -48,12 +68,28 @@ section {
 
 }
 aside {
+    height: 750px;
     grid-area: aside;
     background-color: #ff008069;
     color: rgb(0, 0, 0);
     border-radius: 5%;
     background-image: url('../imgs/aphotecary.png');
     margin-bottom: 1%;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    flex-direction: column;
+}
+.productos {
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.418);
+    width: fit-content;
+    margin: 5px;
+}
+
+div > a {
+    color: aliceblue;
+    text-decoration: none;
 }
 ul {
     color: aliceblue;
@@ -61,6 +97,10 @@ ul {
     display: flex;
     margin: 1px;
     gap: 200px;
+}
+
+li {
+    list-style: none;
 }
 
 li a {
