@@ -85,6 +85,7 @@ aside {
     background-color: rgba(0, 0, 0, 0.418);
     width: fit-content;
     margin: 5px;
+    border-radius: 5%;
 }
 
 div > a {
